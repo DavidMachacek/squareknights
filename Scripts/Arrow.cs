@@ -8,8 +8,6 @@ public class Arrow : MonoBehaviour
         // Check if the collided object is tagged as "Enemy"
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Enemy hit!");
-
             Enemy enemy = other.gameObject.GetComponent<Enemy>();  // Get TileShooter component
 
 

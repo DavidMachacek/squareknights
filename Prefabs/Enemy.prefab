@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 90035353
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 303854554312539980, guid: 17737aa8b12a54e1687cdc88cf7ae647, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -130,13 +130,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d928e01cb0294d7ba6cb6971169bb00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 1
+  detectionRange: 2
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
   moveSpeed: 2
   maxHitpoints: 100
-  healthBarCanvas: {fileID: 7412946146055370874, guid: fb2387d790c814ce09560a68d5e86969,
+  healthBarCanvas: {fileID: 8959961613662790640, guid: fb2387d790c814ce09560a68d5e86969,
     type: 3}
 --- !u!95 &1560565186098896668
 Animator:

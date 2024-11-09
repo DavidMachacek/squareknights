@@ -25,6 +25,5 @@ public class EnemySpawner : MonoBehaviour
             new Vector2(Random.value > 0.5f ? screenWidth + screenEdgeOffset : -screenWidth - screenEdgeOffset, Random.Range(-screenHeight, screenHeight));
 
         GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-        enemy.GetComponent<Enemy>().MoveToCenter();
     }
 }

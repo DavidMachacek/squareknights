@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
 
     private GameObject[,] playerTiles = new GameObject[5, 5]; // 5x5 grid for player tiles
     private Vector2 gridVelocity;
+
+    private Animator Animator;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
                 playerTiles[x, y] = tile;  // Parent them to the player object
             }
         }
+
     }
 
     // Update is called once per frame
@@ -56,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
             gridVelocity = Vector2.zero;
         }
 
+
         // Move the entire grid
         MoveGrid();
 
@@ -72,8 +79,8 @@ public class PlayerMovement : MonoBehaviour
         {
             // Rotate clockwise
             transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
-        }
-        
+        }       
+
     }
 
     // Move the entire grid based on WASD input
@@ -92,10 +99,16 @@ public class PlayerMovement : MonoBehaviour
                 Rigidbody2D rb = playerTiles[x, y].GetComponent<Rigidbody2D>();
                 Animator animator = playerTiles[x, y].GetComponent<Animator>();
 
+                if (gridVelocity == Vector2.zero) {
+                    animator.SetBool("isIdle", true);
+                    animator.SetBool("isWalking", false);
+                } else {
+                    animator.SetBool("isWalking", false);
+                    animator.SetBool("isIdle", true);
+                }
+
                 if (rb != null)
                 {
-                    animator.SetBool("isIdle", false);
-                    animator.SetBool("isWalking", true);
 
                     // Tiles move with the grid, but maintain relative position
                     Vector2 targetTilePosition = new Vector2(
@@ -185,4 +198,5 @@ public class PlayerMovement : MonoBehaviour
 
         return new Vector2(xNew, yNew);
     }
+
 }
