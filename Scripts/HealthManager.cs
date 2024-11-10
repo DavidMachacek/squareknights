@@ -71,7 +71,7 @@ public class HealthManager : MonoBehaviour {
             rb.linearVelocity = Vector2.zero;
             animator.SetBool("isDead", true);
             Destroy(toBeDestroyed, animator.GetCurrentAnimatorStateInfo(0).length + destroyDelay);
-            Destroy(gameObject); // Destroy the object when health is 0 or below
+            //Destroy(toBeDestroyed); // Destroy the object when health is 0 or below
         }
         else
         {

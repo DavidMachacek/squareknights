@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8059054648825650712}
   - component: {fileID: 1560565186098896668}
   - component: {fileID: 3655443687193513198}
+  - component: {fileID: 3985028221600901281}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
@@ -135,9 +136,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   moveSpeed: 2
-  maxHitpoints: 100
-  healthBarCanvas: {fileID: 8959961613662790640, guid: fb2387d790c814ce09560a68d5e86969,
-    type: 3}
 --- !u!95 &1560565186098896668
 Animator:
   serializedVersion: 7
@@ -206,3 +204,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.8, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &3985028221600901281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3800352163945817968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac338068f06c450f839665902b2b531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHitpoints: 100
+  healthBarCanvas: {fileID: 8959961613662790640, guid: fb2387d790c814ce09560a68d5e86969,
+    type: 3}
+  toBeDestroyed: {fileID: 3800352163945817968}

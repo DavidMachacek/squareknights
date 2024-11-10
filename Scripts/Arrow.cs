@@ -8,7 +8,7 @@ public class Arrow : MonoBehaviour
         // Check if the collided object is tagged as "Enemy"
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Enemy enemy = other.gameObject.GetComponent<Enemy>();  // Get TileShooter component
+            HealthManager enemy = other.gameObject.GetComponent<HealthManager>();  // Get TileShooter component
 
 
             if (enemy != null)

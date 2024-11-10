@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
                     transform.position.y + (y - (gridSize - 1) / 2f) * tileSpacing
                 );
                 GameObject tile = Instantiate(tilePrefab, tilePosition, Quaternion.identity, transform);
+                Debug.Log("Initiated Tile on position: " + tilePosition);
+
                 tile.GetComponent<Animator>().SetBool("isIdle", true);
                 playerTiles[x, y] = tile;  // Parent them to the player object
             }
